@@ -1,0 +1,40 @@
+# .gitignore for Python projects
+
+# Virtual environment
+venv/
+.env/
+Lib/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Python cache
+*.pyc
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# Development tools
+.idea/
+.vscode/
+
+# Project-specific files
+*.pyc
+*.pyo
+*.db
+
+# Ignore the Lib folder (if you are using a Windows environment)
+Lib/
+
+# Ignore specific files or directories within the Lib folder
+# Lib/somefile.txt
+# Lib/somedirectory/
