@@ -5,6 +5,7 @@ from db.firestore import DB
 from model.spam_classifier import SpamClassifier
 import pandas as pd
 
+
 # Load your CSV dataset with a different encoding
 dataset_path = "C:/Users/bluev/Documents/itbsa-project/ai-spam-detection/data/main_data.csv"
 df = pd.read_csv(dataset_path, encoding='latin1')

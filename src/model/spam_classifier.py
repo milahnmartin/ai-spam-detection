@@ -8,6 +8,7 @@ import pandas as pd
 
 # Download NLTK data, including stopwords
 nltk.download('stopwords')
+nltk.download('punkt')
 
 class SpamClassifier:
     def __init__(self):
