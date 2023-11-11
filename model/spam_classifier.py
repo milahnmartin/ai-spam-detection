@@ -48,7 +48,7 @@ class SpamClassifier:
         accuracy = cross_val_score(self.model, X_test_preprocessed, y_test, cv=5, scoring='accuracy')
         return accuracy.mean()
 
-    def predict(self, messages, threshold=0.5):
+    def predict(self, messages, threshold=0.3):
         # Preprocess new data
         messages_preprocessed = [self.preprocess_text(text) for text in messages]
 
@@ -63,7 +63,8 @@ class SpamClassifier:
         spam_probabilities = probabilities[:, 1]
 
         # Determine if the message is spam based on the threshold
-        predictions = spam_probabilities > threshold
-
-        return predictions
+        return [
+            spam_probabilities > threshold,spam_probabilities
+        ]
+        
 

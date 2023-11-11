@@ -50,7 +50,9 @@ def process_added_document(spam_classifier, document):
     # Make predictions using the SpamClassifier
     predictions = spam_classifier.predict([message])
 
-    if predictions:
+    print(predictions)
+
+    if predictions[0]:
         print(f'Predicted as spam, marking as spam...,{document.id}')
         DB().get_document("feed", document.id).update({"spam": True})
 
